@@ -1,0 +1,1 @@
+# ai-research-patent-platform
