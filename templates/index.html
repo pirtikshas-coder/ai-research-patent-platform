@@ -1,29 +1,74 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>AI Research Platform</title>
-    <link rel="stylesheet" href="/static/style.css">
+<title>AI Research Platform</title>
+
+<link rel="stylesheet"
+href="/static/style.css">
+
 </head>
+
 <body>
 
 <div class="sidebar">
-    <h2>AI Research</h2>
-    <button>Dashboard</button>
-    <button>Patents</button>
-    <button>Analytics</button>
+
+<h2>🚀 AI Research</h2>
+
+<button>Dashboard</button>
+<button>Research</button>
+<button>Patents</button>
+<button>Analytics</button>
+
 </div>
 
 <div class="main">
-    <h1>AI-Powered Research & Patent Discovery</h1>
 
-    <input type="text" id="query" placeholder="Enter research topic">
+<h1>
+AI-Powered Research & Patent Discovery
+</h1>
 
-    <button onclick="searchAI()">Search</button>
+<div class="cards">
 
-    <div id="resultBox"></div>
+<div class="card">
+<h3>Papers</h3>
+<h2>1520</h2>
 </div>
 
-<script src="/static/script.js"></script>
+<div class="card">
+<h3>Patents</h3>
+<h2>325</h2>
+</div>
+
+<div class="card">
+<h3>Growth</h3>
+<h2>+28%</h2>
+</div>
+
+</div>
+
+<input
+id="query"
+placeholder="Search Topic">
+
+<button onclick="searchAI()">
+
+Search
+
+</button>
+
+<div id="resultBox">
+
+Results appear here
+
+</div>
+
+</div>
+
+<script src="/static/script.js">
+
+</script>
 
 </body>
+
 </html>
