@@ -1,0 +1,47 @@
+body{
+    margin:0;
+    display:flex;
+    font-family:Arial,sans-serif;
+    background:#0f172a;
+    color:white;
+}
+
+.sidebar{
+    width:220px;
+    height:100vh;
+    background:#111827;
+    padding:20px;
+}
+
+.sidebar button{
+    width:100%;
+    margin-top:10px;
+    padding:10px;
+    background:#1f2937;
+    color:white;
+    border:none;
+}
+
+.main{
+    flex:1;
+    padding:30px;
+}
+
+input{
+    width:300px;
+    padding:10px;
+}
+
+button{
+    padding:10px;
+    background:#2563eb;
+    color:white;
+    border:none;
+}
+
+#resultBox{
+    margin-top:20px;
+    background:#1f2937;
+    padding:20px;
+    border-radius:10px;
+}
