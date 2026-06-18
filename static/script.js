@@ -123,3 +123,24 @@ if (chartCanvas) {
     });
 
 }
+function downloadReport(){
+
+let content =
+document.getElementById("resultBox").innerText;
+
+let blob =
+new Blob([content],
+{type:"text/plain"});
+
+let a =
+document.createElement("a");
+
+a.href =
+URL.createObjectURL(blob);
+
+a.download =
+"Research_Report.txt";
+
+a.click();
+
+}

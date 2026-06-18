@@ -2,116 +2,200 @@
 <html>
 
 <head>
-    <title>AI Research Platform</title>
-    <link rel="stylesheet" href="/static/style.css">
+
+<title>AI Research Platform</title>
+
+<link rel="stylesheet" href="/static/style.css">
+
 </head>
 
 <body>
 
-    <div class="sidebar">
+<div class="sidebar">
 
-        <h2>🚀 AI Research</h2>
+    <h2>🚀 AI Research</h2>
 
-        <button>📊 Dashboard</button>
-        <button>📚 Research</button>
-        <button>📜 Patents</button>
-        <button>📈 Analytics</button>
+    <a href="#dashboard" class="menu-btn">📊 Dashboard</a>
 
-    </div>
+    <a href="#researchSection" class="menu-btn">📚 Research</a>
 
-    <div class="main">
+    <a href="#patentSection" class="menu-btn">📜 Patents</a>
 
-        <h1>AI-Powered Research & Patent Discovery</h1>
+    <a href="#analyticsSection" class="menu-btn">📈 Analytics</a>
 
-        <div class="cards">
-
-            <div class="card">
-                <h3>Papers</h3>
-                <h2>1520</h2>
-            </div>
-
-            <div class="card">
-                <h3>Patents</h3>
-                <h2>325</h2>
-            </div>
-
-            <div class="card">
-                <h3>Growth</h3>
-                <h2>+28%</h2>
-            </div>
-
-        </div>
-
-        <div class="search-box">
-            <input id="query" placeholder="Search Research Topic">
-            <button onclick="searchAI()">Search</button>
-        </div>
-
-        <div id="resultBox">
-            AI Research Results appear here...
-        </div>
-
-        <div class="analytics-grid">
-
-           <div class="analytics">
-
-    <h2>📈 Research Analytics</h2>
-
-    <canvas id="researchChart"
-            width="800"
-            height="300">
-    </canvas>
+    <a href="/logout" class="menu-btn">🚪 Logout</a>
 
 </div>
 
-            <div class="trending">
-                <h2>🔥 Trending Technologies</h2>
+<a href="/logout">
+<button>🚪 Logout</button>
+</a>
 
-                <div class="trend-item">🤖 Artificial Intelligence</div>
-                <div class="trend-item">🧬 Biotechnology</div>
-                <div class="trend-item">⚡ Renewable Energy</div>
-                <div class="trend-item">🚗 Autonomous Vehicles</div>
-                <div class="trend-item">🛰️ Space Technology</div>
-            </div>
+</div>
 
-        </div>
+<div class="main" id="dashboard">
 
-        <div class="research-section">
+<h1>AI-Powered Research & Patent Discovery</h1>
 
-            <h2>📚 Latest Research Papers</h2>
+<div class="welcome-box">
 
-            <div class="paper-card">
-                <h3>AI in Healthcare</h3>
-                <p>Machine learning applications for disease prediction.</p>
-            </div>
+<h3>👋 Welcome Researcher</h3>
 
-            <div class="paper-card">
-                <h3>Quantum Computing</h3>
-                <p>Future computing architectures and optimization.</p>
-            </div>
+<p>
+Explore emerging technologies, discover patents,
+analyze research trends and generate insights.
+</p>
 
-        </div>
+</div>
 
-        <div class="research-section">
+<div class="cards">
 
-            <h2>📜 Recent Patents</h2>
+<div class="card">
+<h3>Papers</h3>
+<h2>1520</h2>
+</div>
 
-            <div class="paper-card">
-                <h3>Smart AI Assistant</h3>
-                <p>Patent ID: US2025-AI001</p>
-            </div>
+<div class="card">
+<h3>Patents</h3>
+<h2>325</h2>
+</div>
 
-            <div class="paper-card">
-                <h3>Autonomous Vehicle System</h3>
-                <p>Patent ID: US2025-AUTO201</p>
-            </div>
+<div class="card">
+<h3>Growth</h3>
+<h2>+28%</h2>
+</div>
 
-        </div>
+</div>
 
-    </div>
+<div class="search-box">
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="/static/script.js"></script>
+<input
+id="query"
+placeholder="Search Research Topic">
+
+<button onclick="searchAI()">
+Search
+</button>
+
+<button onclick="downloadReport()">
+⬇ Report
+</button>
+
+</div>
+
+<div id="resultBox">
+
+AI Research Results appear here...
+
+</div>
+
+<div class="analytics-grid">
+
+<div class="analytics" id="analyticsSection">
+
+<h2>📈 Research Analytics</h2>
+
+<canvas
+id="researchChart"
+width="800"
+height="300">
+</canvas>
+
+</div>
+
+<div class="trending">
+
+<h2>🔥 Trending Technologies</h2>
+
+<div class="trend-item">🤖 Artificial Intelligence</div>
+
+<div class="trend-item">🧬 Biotechnology</div>
+
+<div class="trend-item">⚡ Renewable Energy</div>
+
+<div class="trend-item">🚗 Autonomous Vehicles</div>
+
+<div class="trend-item">🛰️ Space Technology</div>
+
+</div>
+
+</div>
+
+<div class="research-section" id="researchSection">
+
+<h2>📚 Latest Research Papers</h2>
+
+<div class="paper-card">
+<h3>AI in Healthcare</h3>
+<p>Machine learning applications for disease prediction.</p>
+</div>
+
+<div class="paper-card">
+<h3>Quantum Computing</h3>
+<p>Future computing architectures and optimization.</p>
+</div>
+
+<div class="paper-card">
+<h3>Robotics Automation</h3>
+<p>Industrial robotics and automation systems.</p>
+</div>
+
+</div>
+
+<div class="research-section" id="patentSection">
+
+<h2>📜 Patent Explorer</h2>
+
+<div class="paper-card">
+<h3>Smart AI Assistant</h3>
+<p>Patent ID: US2025-AI001</p>
+</div>
+
+<div class="paper-card">
+<h3>Autonomous Vehicle System</h3>
+<p>Patent ID: US2025-AUTO201</p>
+</div>
+
+<div class="paper-card">
+<h3>Predictive Analytics Engine</h3>
+<p>Patent ID: US2025-PAE567</p>
+</div>
+
+</div>
+
+<div class="research-section" id="researchSection">
+
+<h2>🕒 Search History</h2>
+
+<ul id="historyList">
+
+<li>Artificial Intelligence</li>
+<li>Machine Learning</li>
+<li>Quantum Computing</li>
+
+</ul>
+
+</div>
+
+<div class="research-section" id="researchSection">
+
+<h2>🎯 Recommended Topics</h2>
+
+<div class="paper-card">Deep Learning</div>
+
+<div class="paper-card">Computer Vision</div>
+
+<div class="paper-card">Generative AI</div>
+
+<div class="paper-card">Cyber Security</div>
+
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="/static/script.js"></script>
 
 </body>
 
