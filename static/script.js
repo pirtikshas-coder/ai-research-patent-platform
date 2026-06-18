@@ -1,66 +1,125 @@
-function searchAI(){
+function searchAI() {
 
-let query =
+    let query = document.getElementById("query").value;
 
-document
-.getElementById(
-"query"
-)
-.value;
+    fetch("/search", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            query: query
+        })
+    })
 
-fetch(
-"/search",
+    .then(response => response.json())
 
-{
+    .then(data => {
 
-method:"POST",
+        document.getElementById("resultBox").innerHTML = `
 
-headers:{
+        <h2>${query}</h2>
 
-"Content-Type":
+        <p>${data.result}</p>
 
-"application/json"
+        <hr>
 
-},
+        <h3>Related Papers</h3>
 
-body:
+        <ul>
+            <li>AI Applications in Healthcare</li>
+            <li>Future of Artificial Intelligence</li>
+            <li>Machine Learning Trends</li>
+        </ul>
 
-JSON.stringify({
+        <h3>Patent Opportunities</h3>
 
-query:query
+        <ul>
+            <li>Smart Diagnostic Systems</li>
+            <li>AI-powered Education Platforms</li>
+            <li>Predictive Analytics Engines</li>
+        </ul>
 
-})
+        `;
+    })
 
+    .catch(error => {
+        console.log(error);
+    });
 }
 
-)
 
-.then(
+// Research Analytics Chart
 
-response=>
+const chartCanvas = document.getElementById("researchChart");
 
-response.json()
+if (chartCanvas) {
 
-)
+    new Chart(chartCanvas, {
 
-.then(
+        type: "line",
 
-data=>{
+        data: {
 
-document
+            labels: [
+                "2021",
+                "2022",
+                "2023",
+                "2024",
+                "2025"
+            ],
 
-.getElementById(
+            datasets: [
 
-"resultBox"
+                {
+                    label: "Research Growth",
 
-)
+                    data: [
+                        100,
+                        250,
+                        450,
+                        700,
+                        1000
+                    ],
 
-.innerHTML=
+                    borderWidth: 3,
 
-data.result;
+                    tension: 0.4
+                }
 
-}
+            ]
+        },
 
-);
+        options: {
+
+            responsive: true,
+
+            plugins: {
+
+                legend: {
+                    labels: {
+                        color: "white"
+                    }
+                }
+
+            },
+
+            scales: {
+
+                x: {
+                    ticks: {
+                        color: "white"
+                    }
+                },
+
+                y: {
+                    ticks: {
+                        color: "white"
+                    }
+                }
+
+            }
+        }
+    });
 
 }

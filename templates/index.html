@@ -2,72 +2,116 @@
 <html>
 
 <head>
-<title>AI Research Platform</title>
-
-<link rel="stylesheet"
-href="/static/style.css">
-
+    <title>AI Research Platform</title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 
 <body>
 
-<div class="sidebar">
+    <div class="sidebar">
 
-<h2>🚀 AI Research</h2>
+        <h2>🚀 AI Research</h2>
 
-<button>Dashboard</button>
-<button>Research</button>
-<button>Patents</button>
-<button>Analytics</button>
+        <button>📊 Dashboard</button>
+        <button>📚 Research</button>
+        <button>📜 Patents</button>
+        <button>📈 Analytics</button>
+
+    </div>
+
+    <div class="main">
+
+        <h1>AI-Powered Research & Patent Discovery</h1>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Papers</h3>
+                <h2>1520</h2>
+            </div>
+
+            <div class="card">
+                <h3>Patents</h3>
+                <h2>325</h2>
+            </div>
+
+            <div class="card">
+                <h3>Growth</h3>
+                <h2>+28%</h2>
+            </div>
+
+        </div>
+
+        <div class="search-box">
+            <input id="query" placeholder="Search Research Topic">
+            <button onclick="searchAI()">Search</button>
+        </div>
+
+        <div id="resultBox">
+            AI Research Results appear here...
+        </div>
+
+        <div class="analytics-grid">
+
+           <div class="analytics">
+
+    <h2>📈 Research Analytics</h2>
+
+    <canvas id="researchChart"
+            width="800"
+            height="300">
+    </canvas>
 
 </div>
 
-<div class="main">
+            <div class="trending">
+                <h2>🔥 Trending Technologies</h2>
 
-<h1>
-AI-Powered Research & Patent Discovery
-</h1>
+                <div class="trend-item">🤖 Artificial Intelligence</div>
+                <div class="trend-item">🧬 Biotechnology</div>
+                <div class="trend-item">⚡ Renewable Energy</div>
+                <div class="trend-item">🚗 Autonomous Vehicles</div>
+                <div class="trend-item">🛰️ Space Technology</div>
+            </div>
 
-<div class="cards">
+        </div>
 
-<div class="card">
-<h3>Papers</h3>
-<h2>1520</h2>
-</div>
+        <div class="research-section">
 
-<div class="card">
-<h3>Patents</h3>
-<h2>325</h2>
-</div>
+            <h2>📚 Latest Research Papers</h2>
 
-<div class="card">
-<h3>Growth</h3>
-<h2>+28%</h2>
-</div>
+            <div class="paper-card">
+                <h3>AI in Healthcare</h3>
+                <p>Machine learning applications for disease prediction.</p>
+            </div>
 
-</div>
+            <div class="paper-card">
+                <h3>Quantum Computing</h3>
+                <p>Future computing architectures and optimization.</p>
+            </div>
 
-<input
-id="query"
-placeholder="Search Topic">
+        </div>
 
-<button onclick="searchAI()">
+        <div class="research-section">
 
-Search
+            <h2>📜 Recent Patents</h2>
 
-</button>
+            <div class="paper-card">
+                <h3>Smart AI Assistant</h3>
+                <p>Patent ID: US2025-AI001</p>
+            </div>
 
-<div id="resultBox">
+            <div class="paper-card">
+                <h3>Autonomous Vehicle System</h3>
+                <p>Patent ID: US2025-AUTO201</p>
+            </div>
 
-Results appear here
+        </div>
 
-</div>
+    </div>
 
-</div>
-
-<script src="/static/script.js">
-
-</script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/static/script.js"></script>
 
 </body>
 
